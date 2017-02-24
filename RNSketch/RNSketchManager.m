@@ -8,9 +8,9 @@
 
 #import "RNSketchManager.h"
 #import "RNSketch.h"
-#import "RCTBridge.h"
-#import "RCTConvert.h"
-#import "RCTEventDispatcher.h"
+#import <React/RCTBridge.h>
+#import <React/RCTConvert.h>
+#import <React/RCTEventDispatcher.h>
 
 #define ERROR_IMAGE_INVALID @"ERROR_IMAGE_INVALID"
 #define ERROR_FILE_CREATION @"ERROR_FILE_CREATION"
@@ -21,10 +21,16 @@ RCT_EXPORT_MODULE()
 
 #pragma mark - Properties
 
+RCT_CUSTOM_VIEW_PROPERTY(imageBackground, NSString, RNSketch)
+{
+//    NSLog(json);
+
+    [view setImageBackground:json ? [RCTConvert NSString:json] : nil];
+}
 
 RCT_CUSTOM_VIEW_PROPERTY(fillColor, UIColor, RNSketch)
 {
-  [view setFillColor:json ? [RCTConvert UIColor:json] : [UIColor whiteColor]];
+    [view setFillColor:json ? [RCTConvert UIColor:json] : nil];
 }
 RCT_CUSTOM_VIEW_PROPERTY(strokeColor, UIColor, RNSketch)
 {
@@ -51,6 +57,7 @@ RCT_EXPORT_VIEW_PROPERTY(strokeThickness, NSInteger)
 {
   if (!self.sketchView) {
     self.sketchView = [[RNSketch alloc] initWithEventDispatcher:self.bridge.eventDispatcher];
+      
   }
   
   return self.sketchView;

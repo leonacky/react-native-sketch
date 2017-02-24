@@ -8,9 +8,9 @@
 
 #import "RNSketch.h"
 #import "RNSketchManager.h"
-#import "RCTEventDispatcher.h"
-#import "RCTView.h"
-#import "UIView+React.h"
+#import <React/RCTEventDispatcher.h>
+#import <React/RCTView.h>
+#import <React/UIView+React.h>
 
 @implementation RNSketch
 {
@@ -25,6 +25,7 @@
   // Configuration settings
   UIColor *_fillColor;
   UIColor *_strokeColor;
+  NSString *_imageBackground;
 }
 
 
@@ -164,8 +165,12 @@
 
   // If first time, paint background
   if (!_image) {
-    [_fillColor setFill];
-    [[UIBezierPath bezierPathWithRect:self.bounds] fill];
+      [_fillColor setFill];
+      [[UIBezierPath bezierPathWithRect:self.bounds] fill];
+      if(_imageBackground.length>0) {
+          UIImage *imageBg = [UIImage imageWithContentsOfFile:_imageBackground];
+          [imageBg drawInRect:self.bounds];
+      }
   }
 
   // Draw with context
@@ -214,6 +219,11 @@
 - (void)setFillColor:(UIColor *)fillColor
 {
   _fillColor = fillColor;
+}
+
+- (void)setImageBackground:(NSString *)imageBackground
+{
+    _imageBackground = imageBackground;
 }
 
 - (void)setStrokeColor:(UIColor *)strokeColor

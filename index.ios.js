@@ -21,6 +21,7 @@ const styles = StyleSheet.create({
 export default class Sketch extends React.Component {
 
   static propTypes = {
+    imageBackground: string,
     fillColor: string,
     onReset: func,
     onUpdate: func,
@@ -31,6 +32,7 @@ export default class Sketch extends React.Component {
   };
 
   static defaultProps = {
+	imageBackground: '',
     fillColor: '#ffffff',
     onReset: () => {},
     onUpdate: () => {},

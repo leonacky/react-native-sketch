@@ -1,9 +1,60 @@
 {
-  "name": "react-native-sketch",
-  "version": "0.3.0",
-  "description": "A react-native component for touch-based drawing",
-  "main": "index.ios.js",
+  "_args": [
+    [
+      {
+        "raw": "react-native-sketch",
+        "scope": null,
+        "escapedName": "react-native-sketch",
+        "name": "react-native-sketch",
+        "rawSpec": "",
+        "spec": "latest",
+        "type": "tag"
+      },
+      "/Users/leonacky/react_native/vatgiateam/VatGia"
+    ]
+  ],
+  "_from": "react-native-sketch@latest",
+  "_id": "react-native-sketch@0.3.0",
+  "_inCache": true,
+  "_location": "/react-native-sketch",
+  "_nodeVersion": "4.3.0",
+  "_npmOperationalInternal": {
+    "host": "packages-18-east.internal.npmjs.com",
+    "tmp": "tmp/react-native-sketch-0.3.0.tgz_1484760304586_0.4372821426950395"
+  },
+  "_npmUser": {
+    "name": "jgrancher",
+    "email": "jgrancher@outlook.com"
+  },
+  "_npmVersion": "3.7.5",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "react-native-sketch",
+    "scope": null,
+    "escapedName": "react-native-sketch",
+    "name": "react-native-sketch",
+    "rawSpec": "",
+    "spec": "latest",
+    "type": "tag"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/react-native-sketch/-/react-native-sketch-0.3.0.tgz",
+  "_shasum": "f5732f1cd38d165f5cbdc0bf2b6a3c0573547008",
+  "_shrinkwrap": null,
+  "_spec": "react-native-sketch",
+  "_where": "/Users/leonacky/react_native/vatgiateam/VatGia",
+  "author": {
+    "name": "Jeremy Grancher",
+    "url": "https://github.com/jgrancher"
+  },
+  "bugs": {
+    "url": "https://github.com/jgrancher/react-native-sketch/issues"
+  },
   "dependencies": {},
+  "description": "A react-native component for touch-based drawing",
   "devDependencies": {
     "babel-eslint": "^6.0.4",
     "eslint": "^2.9.0",
@@ -14,14 +65,13 @@
     "react": "^0.14.5",
     "react-native": "^0.24.1"
   },
-  "scripts": {
-    "postversion": "git push --follow-tags",
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "directories": {},
+  "dist": {
+    "shasum": "f5732f1cd38d165f5cbdc0bf2b6a3c0573547008",
+    "tarball": "https://registry.npmjs.org/react-native-sketch/-/react-native-sketch-0.3.0.tgz"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/jgrancher/react-native-sketch.git"
-  },
+  "gitHead": "1e7f9a5d3b7375f5ac3566a76cc01482140fb0c2",
+  "homepage": "https://github.com/jgrancher/react-native-sketch#readme",
   "keywords": [
     "react",
     "react-component",
@@ -35,6 +85,24 @@
     "canvas",
     "signature"
   ],
-  "author": "Jeremy Grancher (https://github.com/jgrancher)",
-  "license": "MIT"
+  "license": "MIT",
+  "main": "index.ios.js",
+  "maintainers": [
+    {
+      "name": "jgrancher",
+      "email": "jgrancher@outlook.com"
+    }
+  ],
+  "name": "react-native-sketch",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jgrancher/react-native-sketch.git"
+  },
+  "scripts": {
+    "postversion": "git push --follow-tags",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "0.3.0"
 }
